@@ -2,37 +2,109 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Love Letter</title>
-  <link href='https://fonts.googleapis.com/css?family=Hind' rel='stylesheet' type='text/css'><link rel="stylesheet" href="./style.css">
+  <title>CodePen - A Pen by Joelito Laurente</title>
+  
 
 </head>
 <body>
 <!-- partial:index.partial.html -->
-<div class="container">
-	<label>
-	<div class="heart">
-		<img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Love_Heart_SVG.svg"></img>
-	</div>
-	<input id="messageState" type="checkbox" style="display:none"/>
-	</label>
-	<div class="message">
-		<h1>Hi, my love</h1>
-		<p>To the love of my life, 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day Surprise</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: url('https://i.pinimg.com/564x/3b/4b/21/3b4b211829a5fd1cc087c04f76279115.jpg') no-repeat fixed;
+            background-size: cover;
+            background-position: center;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+        h1 {
+            color: #e91e63;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 20px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .signature {
+            font-style: italic;
+            font-size: 18px;
+            color: #666;
+        }
+        .love-letter {
+            text-align: left;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            margin-top: 20px;
+            display: none;
+        }
+        .love-letter h1 {
+            color: #e91e63;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .love-letter p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        .love-letter p:last-child {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" onclick="toggleLoveLetter()">
+        <h1>Flowers for you, mybaby! Happy Valentine's Day!i love youuuu so much</h1>
+        <p>pislita ang flowers :p❤️</p>
+        <img class="flowers" src="https://i.pinimg.com/originals/d4/5e/47/d45e47ee0ea7e9e285de7d10f34d2f6e.gif" alt="flowers">
+    </div>
 
-			Every day is a blessing to me, and every time that i am with you, it makes me feel like the luckiest person to be loved by someone like you. From the moment i wake up and sleep at night, my heart is at ease.</p>
-			
-			<p>Your past doesnt bother me, it has made the person you are today. What matters is the present that you have me, spending your time with me, and loving me with all your heart. </p>
-			
-			<p>We do not know what future holds, but whatever happens, i will be always and forever grateful that i have been part of your life. I will forever cherish these moments, and i will love you till my last breath.</p>
-			
-			Yours truly,
-			Your beloved
-			</p>
-	</div>
-</div>
+    <div class="love-letter" id="loveLetterContent">
+        <h1>Happy Valentine's Day, my baby!</h1>
+        <p>As I sit down to write this letter, I can't help but feel overwhelmed with gratitude and joy for having you in my life. It's been nearly two years since we first met, and every moment with you has been a treasure.</p>
+        <p>You are my greatest love, my everything. Your presence brings me comfort and joy, and your love fills my heart with warmth. I am so lucky to have you by my side, and I am grateful for the love and happiness you bring into my life every day.</p>
+        <p>Thank you for being the incredible person that you are, for your unwavering support, and for loving me with all your heart. I cherish every moment we share together and look forward to creating many more beautiful memories with you.</p>
+        <p>With all my love,</p>
+        <p class="signature"></p>
+    </div>
+
+    <script>
+        function toggleLoveLetter() {
+            var loveLetter = document.getElementById("loveLetterContent");
+            if (loveLetter.style.display === "none") {
+                loveLetter.style.display = "block";
+            } else {
+                loveLetter.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
 <!-- partial -->
-  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.min.js'></script><script  src="./script.js"></script>
-
+  
 </body>
 </html>
