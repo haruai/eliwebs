@@ -1,20 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>I love you baby</title>
-  
-
-</head>
-<body>
-<!-- partial:index.partial.html -->
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mwa</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>I love you baby</title>
     <style>
         body {
             margin: 0;
@@ -23,14 +12,14 @@
             background-size: cover;
             background-position: center;
             color: #333;
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
         }
         .container {
-            max-width: 600px;
-            margin: 50px auto;
+            max-width: 90%;
+            margin: 20px;
             padding: 20px;
             background-color: rgba(255, 255, 255, 0.8);
             border-radius: 10px;
@@ -39,18 +28,13 @@
         }
         h1 {
             color: #e91e63;
-            font-size: 36px;
+            font-size: 24px;
             margin-bottom: 20px;
         }
         p {
-            font-size: 20px;
+            font-size: 16px;
             line-height: 1.6;
             margin-bottom: 20px;
-        }
-        .signature {
-            font-style: italic;
-            font-size: 18px;
-            color: #666;
         }
         .love-letter {
             text-align: left;
@@ -63,49 +47,50 @@
         }
         .love-letter h1 {
             color: #e91e63;
-            font-size: 24px;
+            font-size: 20px;
             margin-bottom: 10px;
         }
         .love-letter p {
-            font-size: 16px;
+            font-size: 14px;
             line-height: 1.6;
             margin-bottom: 10px;
         }
         .love-letter p:last-child {
             margin-bottom: 0;
         }
+        .flowers {
+            width: 80%;
+            max-width: 300px;
+        }
     </style>
 </head>
 <body>
     <div class="container" onclick="toggleLoveLetter()">
         <h1>For you tatin</h1>
-        <p>Click me :p</p>
+        <p>Tap anywhere on the page to reveal the love letter.</p>
         <img class="flowers" src="https://i.pinimg.com/originals/d4/5e/47/d45e47ee0ea7e9e285de7d10f34d2f6e.gif" alt="flowers">
     </div>
 
     <div class="love-letter" id="loveLetterContent">
         <h1>To my love,</h1>
-        <p>Every day is a blessing to me, and every time that i am with you, it makes me feel like the luckiest person to be loved by someone like you. From the moment i wake up and sleep at night, my heart is at ease.</p>
-        <p>Your past doesn’t bother me, it has made the person you are today. What matters is the present that you have me, spending your time with me, and loving me with all your heart.</p>
-        <p>We do not know what future holds, but whatever happens, i will be always and forever grateful that i have been part of your life. I will forever cherish these moments, and i will love you till my last breath. </p>
+        <p>Every day is a blessing to me, and every time that I am with you, it makes me feel like the luckiest person to be loved by someone like you. From the moment I wake up and sleep at night, my heart is at ease.</p>
+        <p>Your past doesn’t bother me; it has made the person you are today. What matters is the present that you have with me, spending your time with me, and loving me with all your heart.</p>
+        <p>We do not know what the future holds, but whatever happens, I will always and forever be grateful that I have been part of your life. I will forever cherish these moments, and I will love you till my last breath.</p>
         <p>Yours truly,</p>
-            <p>Your beloved</p>
+        <p>Your beloved</p>
         <p class="signature"></p>
     </div>
 
     <script>
-        function toggleLoveLetter() {
+        function toggleLoveLetter(event) {
             var loveLetter = document.getElementById("loveLetterContent");
-            if (loveLetter.style.display === "none") {
+            if (loveLetter.style.display === "none" || loveLetter.style.display === "") {
                 loveLetter.style.display = "block";
             } else {
                 loveLetter.style.display = "none";
             }
+            event.stopPropagation();
         }
     </script>
-</body>
-</html>
-<!-- partial -->
-  
 </body>
 </html>
